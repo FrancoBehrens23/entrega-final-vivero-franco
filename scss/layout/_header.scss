@@ -1,0 +1,79 @@
+$primary-color: #343a40;
+$secondary-color: #ccc;
+$accent-color: #286af0;
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin center-block {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+html, body {
+  height: 100%;
+  background: #fff;
+}
+
+header {
+  display: block;
+  background: $primary-color;
+  padding: 10px 0px;
+}
+
+section, section2 {
+  width: 100%;
+  background: $secondary-color;
+  float: left;
+  overflow: auto;
+  padding-bottom: 60px;
+  padding-top: 30px;
+}
+
+footer {
+  position: relative;
+  margin-top: 0px;
+  padding: 5px 0px;
+  clear: both;
+  background: $accent-color;
+  text-align: center;
+  color: #fff;
+  @include clearfix;
+}
+
+figure {
+  display: table;
+  @include center-block;
+}
+
+.bg-index, .bg-contacto {
+  background-image: url();
+}
+
+.contenedor {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #fafafa;
+}
+
+.logo {
+  margin-top: 10px;
+  /* Ajusta este valor según sea necesario */
+  margin-right: 10px;
+  /* Espacio entre el logo y el texto */
+  width: 50px;
+  /* Ajusta el ancho del logo según sea necesario */
+  height: auto;
+  /* Mantén la proporción del logo */
+}
+.navbar {
+  padding: 0.5rem 0; /* Ajusta el relleno vertical según sea necesario */
+}
